@@ -1,0 +1,282 @@
+        <!-- Three pillars of Good Code -- Responsive Design / Scalability / Web Perf -->
+        <!-- Responive -- Fluid Layouts / Media Queries / Responsive Imgs / Units / Mobile-First -->
+        <!-- Scalability -- Reusable - Organized - class names - structured html -->
+        <!-- --Cascade = process of combining different stylesheets - resolve between different CSS rules and declarations -->
+        <!-- -- Cascade Solution -- Importance [Author, User, Default Browser] -->
+        <!-- -- Cascade Solution -- Specificity (Inline, ID, Classes, Elements) -->
+        <!-- -- Cascade Solution -- Source Order [Author, User, Default Browser] -->
+        <!-- --Value Order = Declared Cascaded Specified Computed Used -->
+        <!-- --  Declared Value =  collects inline, id, class and element values -->
+        <!-- --  Cascaded Value =  values selected after cascading declared values-->
+        <!-- --  Specified Value =  default/inherited value (padding is 0px if not declared; font-size 16px) -->
+        <!-- --  Computed Value =  relative values converted to display (1.5rem * 16px[default] = 24px) -->
+        <!-- --  Used Value =  final calculation based on layout -->
+        <!-- --  Actual Value =  UsedValue+device/browser restrictions -->
+        <!-- CSS - box model / box type [inline, block, inline-block] / position / stacking -->
+        <!-- -- box type   [block take up entire horizontal; inline aligns horiz w/out box-model; inline-block aligns horiz w/ box model] -->
+        <!-- -- .block__element--modifer   recipe__btn--round   profile__hero--dark -->
+        <!-- -- 7-1 pattern = 7 different folders for partial SASS files / 1 main SASS to import -->
+        <!-- ---- [base/, components/, layout/, pages/, themes/, abstracts/, vendors/] -->
+
+
+
+Varables
+    reusable values
+Operators
+    mathematical operators
+Partials
+    importable CSS files
+Mixins
+    Reusable CSS code
+Functions
+    Mixins that produce usable value
+Extends
+    inheritable declarations for selectors
+Control directives
+    Conditionals and Loops for CSS
+
+    float left / float right on the same line!!!!!
+
+add to parent element...
+nav::after {
+  content: "";
+  clear: both;
+  display: table
+}
+
+.......within SASS.......
+nav {
+  ...
+  
+  &::after {
+  content: "";
+  clear: both;
+  display: table
+  }
+
+  ... hover darken trick
+  &:hover {
+    background-color: darken($color-secondary, 15%)
+  }
+}
+
+..... within SASS mixin .....
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table
+  }
+}
+
+
+
+
+
+
+<section class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+
+
+
+.... implementing mixin....
+@include clearfix
+
+
+.... good mixin for buttons ...
+@mixin buttonMixin($color) {
+  text-decoration: none;
+  color: $color;
+  border-radius: 100px;
+}
+
+.... function
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+.... %placeholder and @extend [similar to @mixin and @include]
+doesn't allow for $arguments
+
+%btn-placeholder {
+  display: inline-block;
+  text-align: center;
+  @include buttonMixin($secondaryColor);
+}
+
+.btn-main {
+  &:link {
+    @extend %btn-placeholder
+    background-color: $someOtherColor;
+  }
+}
+
+why placeholder? when compiled... it combines for a better minimalism... best for those with NO ARGUMENT
+
+
+////// Design Principles
+
+Fluid Layout
+  use percentage vs pixels
+
+Flexible images
+  not as easy as text
+  ensure proper dimensions
+
+Media Queries
+  Change styles on certain breakpoints
+
+
+// Flex Layout  
+  - Implement a simple grid
+  - Set Attribute selectors
+  - Implement `:not` pseudo-class
+  - Implement `calc()` operations
+
+
+// Think Build Architect
+
+Next sections [1 block; two inline-block]
+  - Colored ALL CAPS Header 
+  - 2 Paragraphs with all caps titles
+  - Colored Button link
+  - Three pictures with box shadows
+
+Animations
+  - Hover animation for 
+    1. Main Header
+    1. Link
+  - Hover image with border
+
+Colors
+  - egg shell gray background
+
+Think 7-1 Organization
+  - Typography
+    - Header + paragraph headers
+  - Button
+  - Grid/Layout
+    - header + 2 columns
+  - Component 
+    - Picture zoomer
+
+
+Desktop First 
+  using `max-width`
+
+Mobile First
+  using `min-width`
+
+Pro / Conditionals  
+  Mobile
+    optimized for mobile experience
+    reduces web apps to essentials
+    more efficient
+    more content / less aesthetics
+  Con
+    Feels empty on desktop
+    More difficult
+    Less freedom
+    When making prototype... no one likes to see mobile version
+
+
+breakpoints as width based on
+  1. each apple product...
+      BAD!!! not future proof
+  1. Using groups [s3, s4, iphonex together]
+      Decent
+  1. Just set breakpoints, no specific 
+      Perfect
+
+Sampling of widths
+  phone -- 600 -- tablet[portrait] -- 900 -- tablet[landscape] -- 1200 -- desktop -- 1800 -- bg desktop
+
+
+NEVER FORGET
+  if you use desktop First 
+    describe desktop FIRST IN THE MEDIA QUERIES
+
+  Desktop Media Query pattern
+    < 1200px
+    < 900px
+    < 600px
+    > 1800px
+    
+  Mobile Medis Query pattern
+    > 900px
+    > 1200px
+    > 1800px
+    < 600px
+
+
+Responsive images
+  giving the correct size for the correct device/browser
+
+  Two types
+    Resolution switching -- phone/mobile
+    Density switching ----- iphone retina vs 1080
+    Art direction --------- changing picture because landscape pictures don't make sense on portrait
+
+Build process 
+  sass 
+    ++compiles++
+  style.comp.css
