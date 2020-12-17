@@ -124,11 +124,36 @@
 .side-nav {
 
 
-    &__item {}
-    &__link {}
+    &__item {
+        position: relative;
+    }
+    &__item::before {
+        content: "";
+        position: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+    }
+    
+    &__link:link,
+    &__link:visited {
+        display: flex;
+        align-items: center;
+
+
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+    }
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
     }
 }
 
