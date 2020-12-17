@@ -151,7 +151,7 @@
                     width .2s cubic-bezier(1, 0, 0, 1) .2s,
                     background-color .1s;
         
-           //  time1  time2,   time1 is the duration; time2 is the delay
+        //  time1  time2,   time1 is the duration; time2 is the delay
     }
         
     &__item:hover::before,
@@ -215,9 +215,45 @@
 
 .gallery {
     display: flex;
-
+    
     &__photo {
         width: 100%;
         display: block ;
     }
+    
+    
+}
+
+
+
+/////////////////////////////////////
+// Overview
+
+.overview {
+    display: flex;
+    &__heading {}
+    &__stars {
+        margin-right: auto;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: var(--color-primary);
+        
+        @media only screen {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    &__location {
+    }
+    &__rating {}
+    &__rating-average {}
+    &__rating-count {}
 }
