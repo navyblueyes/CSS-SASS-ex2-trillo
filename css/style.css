@@ -296,11 +296,30 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column; }
+  .review__user {
+    display: flex;
+    margin-top: 2rem; }
   .review__photo {
     height: 4.5rem;
     width: 4.5rem;
     border-radius: 50%; }
+  .review__user-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: auto; }
+  .review__user-name {
+    text-transform: uppercase !important;
+    font-weight: 700 !important; }
+  .review__user-date {
+    font-size: .8rem;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    color: var(--color-primary);
+    font-size: 2.5rem; }
 
 .container {
   max-width: 120rem;
@@ -338,7 +357,6 @@ body {
   border-bottom: var(--line); }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
