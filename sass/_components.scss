@@ -11,7 +11,7 @@
 ///////////////////////////////////////////////////////
 // SEARCH
 .search {
-    background-color: orangered;
+    background-color: #fff;//please
     flex: 0 0 40%;
 
     display: flex;
@@ -21,12 +21,12 @@
     &__input {
         font-family: inherit;
         font-size: inherit;
-        background-size: var(--color-grey-light-2);
+        background-color: var(--color-grey-light-2);
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
         width: 90%;
-        transition: all .2s;
+        transition: all .5s;
         margin-right: -3.5rem;
         
         &:focus {
@@ -492,12 +492,13 @@
     font-weight: 300;
     text-transform: uppercase;
     border-radius: 100px;
-    margin: 0 33vw;
+    margin: 0 auto;
     height: 4rem;
     border: none;
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
     color: #fff;
     position: relative;
+    width: 20vw;
 
     & > * {
         display: inline-block;

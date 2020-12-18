@@ -10,7 +10,7 @@
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--line);
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,8 +28,7 @@
     justify-content: space-between;
 }
 .hotel-view { 
-    
-    flex: 1;
+    max-width: 82%;
 }
 .detail {
     font-size: 1.4rem;
@@ -44,6 +43,9 @@
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .user-reviews {
     flex: 1;
