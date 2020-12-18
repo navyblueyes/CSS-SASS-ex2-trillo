@@ -30,7 +30,7 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 68.75em) {
     html {
-      font-size: 50%; } }
+      font-size: 55%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -127,7 +127,7 @@ body {
   text-transform: uppercase; }
   .side-nav__item {
     position: relative;
-    padding: 1.5rem .1rem;
+    padding: 4rem .1rem;
     color: var(--color-grey-light-1); }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
@@ -298,7 +298,7 @@ body {
     border-radius: 50%;
     border: 3px solid #fff; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: #fff;
@@ -406,6 +406,9 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media screen and (max-width: 75em) {
+    .container {
+      margin: 0; } }
 
 .header {
   font-size: 1.4rem;
