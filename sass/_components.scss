@@ -86,7 +86,7 @@
     
     
     &__icon-box {
-        position: relative;
+        position: relative; 
     }
     &__icon {
         height: 2.25rem;
@@ -127,6 +127,12 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    
+    @media screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;   
+    }
+    
     &__item {
         position: relative;
         padding: 4rem .1rem;
@@ -134,6 +140,12 @@
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+        }
+        
+        @media screen and (max-width: $bp-medium) {
+            flex: 1;
+            margin: 0;  
+            padding: 3rem 2rem; 
         }
     }
     &__item::before {
@@ -147,20 +159,20 @@
         transform: scaleY(0);
         // transform starts in middle; if you want it to start from the bottom -- transform-origin: bottom; 
         transition: transform .2s, 
-                    width .2s cubic-bezier(1, 0, 0, 1) .2s,
+        width .2s cubic-bezier(1, 0, 0, 1) .2s,
                     background-color .1s;
-        
-        //  time1  time2,   time1 is the duration; time2 is the delay
-    }
-        
-    &__item:hover::before,
-    &__item--active:hover::before {
-        transform: scaleY(1);
-        width: 100%;
-    }
-
-    &__item:active::before {
-        background-color: var(--color-primary-light);
+                    
+                    //  time1  time2,   time1 is the duration; time2 is the delay
+                }
+                
+                &__item:hover::before,
+                &__item--active:hover::before {
+                    transform: scaleY(1);
+                    width: 100%;
+                }
+                
+                &__item:active::before {
+                    background-color: var(--color-primary-light);
     }
 
     &__link:link,
@@ -194,6 +206,9 @@
         left: 5rem;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        @media screen and (max-width: $bp-medium) {
+            left: 7rem;   
+        }
     }
 }
 
@@ -207,6 +222,11 @@
     color:var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    
+    @media screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 /////////////////////////////////////

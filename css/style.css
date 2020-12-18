@@ -125,12 +125,21 @@ body {
   margin-top: 3.5rem;
   text-decoration: none;
   text-transform: uppercase; }
+  @media screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative;
     padding: 4rem .1rem;
     color: var(--color-grey-light-1); }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+    @media screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1;
+        margin: 0;
+        padding: 3rem 2rem; } }
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -174,12 +183,18 @@ body {
     left: 5rem;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    @media screen and (max-width: 56.25em) {
+      .side-nav__text {
+        left: 7rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -421,6 +436,9 @@ body {
 
 .content {
   display: flex; }
+  @media screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -431,6 +449,9 @@ body {
 
 .hotel-view {
   max-width: 82%; }
+  @media screen and (max-width: 56.25em) {
+    .hotel-view {
+      max-width: 100%; } }
 
 .detail {
   font-size: 1.4rem;

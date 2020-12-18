@@ -21,6 +21,9 @@
 }
 .content {
     display: flex;
+    @media screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 .sidebar {
     background-color: var(--color-grey-dark-1);
@@ -33,6 +36,9 @@
 }
 .hotel-view { 
     max-width: 82%;
+    @media screen and (max-width: $bp-medium) {
+        max-width: 100%;
+    }
 }
 .detail {
     font-size: 1.4rem;
