@@ -469,13 +469,33 @@
 // Call to Action
 
 .cta {
+    display: block;
     padding: 3.5rem 0;
     text-align: center;
-
+    
     &__book-now {
-        font-size: 1.2rem;
+        font-size: 2rem;
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 2.5rem ;
+    }
+}
+
+
+/////////////////////////////////////
+// Call to Action -- Button
+
+.btn {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+
+    &__visible {
+        display: inline-block;
+        padding: 2rem .75rem;
     }
 }
