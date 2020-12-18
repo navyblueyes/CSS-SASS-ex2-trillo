@@ -81,7 +81,6 @@ body {
     fill: var(--color-grey-dark-3); }
 
 .user-nav {
-  background-color: greenyellow;
   display: flex;
   align-items: center;
   align-self: stretch; }
@@ -293,6 +292,16 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -323,6 +332,7 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   border-bottom: var(--line); }
@@ -336,5 +346,4 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1; }
