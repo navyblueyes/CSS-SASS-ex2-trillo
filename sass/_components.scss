@@ -469,7 +469,9 @@
 // Call to Action
 
 .cta {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 3.5rem 0;
     text-align: center;
     
@@ -490,12 +492,48 @@
     font-weight: 300;
     text-transform: uppercase;
     border-radius: 100px;
+    margin: 0 33vw;
+    height: 4rem;
     border: none;
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
     color: #fff;
+    position: relative;
 
-    &__visible {
+    & > * {
         display: inline-block;
-        padding: 2rem .75rem;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+        position: relative;
+        top: 1rem;
+    }
+    &__visible {
+        padding: 3rem 0rem;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__invisibile {
+        position: absolute;
+        left: 0;
+        top: -3rem;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+    &:hover &__visibile {
+        transform: translateY(-100%);
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:hover &__invisibile {
+        transform: translateY(100%);
+        visibility: visible;
+        opacity: 1;
+    }
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
     }
 }
