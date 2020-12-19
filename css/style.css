@@ -52,6 +52,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -135,11 +140,17 @@ body {
     color: var(--color-grey-light-1); }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0rem; } }
     @media screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1;
         margin: 0;
         padding: 3rem 2rem; } }
+    @media screen and (max-width: 37.5em) {
+      .side-nav__item {
+        padding: 1rem 2rem; } }
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -168,12 +179,16 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     margin-left: 2rem;
-    margin-right: 1rem;
     fill: var(--color-grey-light-1);
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    @media screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.5rem; } }
   .side-nav__text {
     text-decoration: none;
     text-transform: uppercase;
@@ -186,6 +201,10 @@ body {
     @media screen and (max-width: 56.25em) {
       .side-nav__text {
         left: 7rem; } }
+    @media screen and (max-width: 37.5em) {
+      .side-nav__text {
+        font-size: 1rem;
+        left: 4rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -212,6 +231,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.4rem;
+        padding: .4rem 1rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -238,9 +261,15 @@ body {
     font-size: 2.24rem;
     font-weight: 300;
     margin-bottom: -3px; }
+    @media screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.4rem; } }
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
+    @media screen and (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: .6rem; } }
 
 .btn-inline {
   border: none;
@@ -431,8 +460,13 @@ body {
   background-color: #fff;
   border-bottom: var(--line);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; }
+  @media screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 11rem; } }
 
 .content {
   display: flex; }
@@ -459,6 +493,13 @@ body {
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
+  @media screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
+  @media screen and (max-width: 37.5em) {
+    .detail {
+      padding: 1rem;
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -469,6 +510,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media screen and (max-width: 56.25em) {
+    .description {
+      padding: 3rem; } }
+  @media screen and (max-width: 37.5em) {
+    .description {
+      padding: 1rem;
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
